@@ -1,0 +1,23 @@
+import Image from "next/image";
+import heroImage from "@/images/hero-image.jpg";
+import styles from "@/styles/Hero.module.css";
+
+export default function Hero() {
+  return (
+    <section className={styles.hero}>
+      <Image
+        src={heroImage}
+        alt="Nick and Olivia"
+        priority
+        className={styles.heroImage}
+      />
+      <div className={styles.heroContent}>
+        <h1 className={styles.heroTitle}>
+          <span>Nick</span><span className={styles.ampersand}>&amp;</span><span>Olivia</span>
+        </h1>
+        <p>October 17, 2026</p>
+        <p>Knoxville, TN</p>
+      </div>
+    </section>
+  );
+}
