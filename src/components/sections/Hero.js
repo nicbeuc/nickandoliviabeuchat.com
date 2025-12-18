@@ -5,12 +5,14 @@ import styles from "@/styles/Hero.module.css";
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <Image
-        src={heroImage}
-        alt="Nick and Olivia"
-        priority
-        className={styles.heroImage}
-      />
+      <div className={styles.heroBackground}>
+        <Image
+          src={heroImage}
+          alt="Nick and Olivia"
+          priority
+          className={styles.heroImage}
+        />
+      </div>
       <div className={styles.heroContent}>
         <h1 className={styles.heroTitle}>
           <span>Nick</span><span className={styles.ampersand}>&amp;</span><span>Olivia</span>
