@@ -1,5 +1,6 @@
 :root {
   --color-beige: #F0E8E2;
+  --color-green: #3E5E16;
   --font-size-body: 0.875rem;
   --overline-letter-spacing: 0.05ch;
   --page-margin: 1.5rem;
@@ -15,6 +16,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +28,17 @@ main {
   display: block;
   position: relative;
   height: 300vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Typography */

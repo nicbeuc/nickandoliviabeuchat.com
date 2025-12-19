@@ -1,4 +1,4 @@
 .ourStory {
   height: 200vh;
-  background-color: white;
+  background-color: var(--color-beige);
 }
