@@ -5,7 +5,7 @@
   height: 100vh;
   color: var(--color-beige);
   isolation: isolate;
-  z-index: -1;
+  z-index: 0;
 }
 
 .heroBackground::after {
@@ -21,16 +21,21 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   z-index: -1;
 }
 
 .heroImage {
   position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
+  inset: 0 -10% -15% -12%;
+  height: 120%;
+  width: 120%;
   object-fit: cover;
   object-position: center;
+
+  @media (width <=768px) {
+    left: -15%;
+  }
 }
 
 .heroTitle {
@@ -38,6 +43,12 @@
   text-transform: uppercase;
   letter-spacing: -.025ch;
   user-select: none;
+
+  @media (width <= 768px) {
+    grid-column: 1/-1;
+    font-size: clamp(2rem, 14vw, 5rem);
+    /* margin-bottom: .05em; */
+  }
 }
 
 .heroTitle span {
@@ -45,17 +56,37 @@
 }
 
 .heroContent {
+  position: relative;
   width: 100%;
   height: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  padding-bottom: 12rem;
+  z-index: 2;
+  padding-inline: var(--page-margin);
+}
+
+.heroText {
+  width: 100%;
   display: flex;
   align-items: center;
-  z-index: 2;
-  padding-bottom: 12rem;
+  margin-bottom: 3rem;
   gap: 2rem;
   justify-content: space-between;
-  max-width: 60rem;
-  margin-inline: auto;
-  padding-inline: var(--page-margin);
+
+  @media (width <= 768px) {
+    width: fit-content;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
 }
 
 .ampersand {
@@ -73,9 +104,24 @@
   letter-spacing: var(--overline-letter-spacing);
   text-transform: uppercase;
   line-height: 2rem;
+
+  @media (width <= 768px) {
+    width: 100%;
+  }
 }
 
 .heroContent p:first-of-type {
   order: -1;
   text-align: right;
+
+  @media (width <=768px) {
+    order: unset;
+    text-align: left;
+  }
+}
+
+@media (width <= 768px) {
+  .heroContent p:last-of-type {
+    text-align: right;
+  }
 }

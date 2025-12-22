@@ -24,16 +24,16 @@ export default function Nav() {
       <nav className={styles.navWrapper}>
         <ul>
           <li>
-            <a href="#our-story">Our Story</a>
+            <a href="#our-story"><span>Our Story</span></a>
           </li>
           <li>
-            <a href="#venue">Venue</a>
+            <a href="#venue"><span>Venue</span></a>
           </li>
           <li>
-            <a href="#lodging">Lodging</a>
+            <a href="#lodging"><span>Lodging</span></a>
           </li>
           <li>
-            <a href="#rsvp">RSVP</a>
+            <a href="#rsvp"><span>RSVP</span></a>
           </li>
         </ul>
       </nav>
