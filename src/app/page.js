@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import OurStory from "@/components/sections/OurStory";
+import Details from "@/components/sections/Details";
 import Nav from "@/components/ui/Nav";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <OurStory />
+      <Details />
     </main>
   );
 }

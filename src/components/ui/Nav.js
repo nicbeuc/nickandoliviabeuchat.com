@@ -27,7 +27,7 @@ export default function Nav() {
             <a href="#our-story"><span>Our Story</span></a>
           </li>
           <li>
-            <a href="#venue"><span>Venue</span></a>
+            <a href="#details"><span>Details</span></a>
           </li>
           <li>
             <a href="#lodging"><span>Lodging</span></a>
