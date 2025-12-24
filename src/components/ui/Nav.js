@@ -37,7 +37,7 @@ export default function Nav() {
           }
         });
       },
-      { rootMargin: "-50px 0px -99% 0px", threshold: 0 }
+      { rootMargin: "-50px 0px -90% 0px", threshold: 0 }
     );
 
     // Observer for active section
@@ -68,7 +68,7 @@ export default function Nav() {
         });
       },
       {
-        rootMargin: "-50px 0px -99% 0px",
+        rootMargin: "-50px 0px -90% 0px",
         threshold: 0
       }
     );
