@@ -8,8 +8,10 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <OurStory />
-      <Details />
+      <div className="non-sticky-sections" data-color-scheme="1">
+        <OurStory />
+        <Details />
+      </div>
     </main>
   );
 }

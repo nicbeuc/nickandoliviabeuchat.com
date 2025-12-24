@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   height: 100vh;
-  color: var(--color-beige);
   isolation: isolate;
   z-index: 0;
+  color: var(--color-beige);
 }
 
 .heroBackground::after {

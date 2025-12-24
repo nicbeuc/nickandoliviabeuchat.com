@@ -5,7 +5,7 @@ import styles from "@/styles/Hero.module.css";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} data-container="full-width">
       <div className={styles.heroBackground}>
         <Image
           src={heroImage}

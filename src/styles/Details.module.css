@@ -1,9 +1,5 @@
 .details {
   position: relative;
-  color: var(--color-green);
-  background-color: var(--color-beige);
-  padding-top: 4rem;
-  padding-bottom: 8rem;
 }
 
 .details h2::before {

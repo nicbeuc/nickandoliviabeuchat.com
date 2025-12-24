@@ -4,8 +4,8 @@ import styles from "@/styles/Details.module.css";
 
 export default function Details() {
   return (
-    <section className={styles.details} id="details">
-      <div className={`${styles.detailsInner} section-split`}>
+    <section className={styles.details} id="details" data-color-scheme="3" data-container="contained">
+      <div className={styles.detailsInner} data-layout="split">
         <div className={styles.detailsImage}>
           <Image src={venueImage} alt="Riverview Family Farm" width={800} height={1200}/>
         </div>

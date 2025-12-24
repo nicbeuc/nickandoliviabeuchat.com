@@ -3,8 +3,8 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--color-beige);
-  /* mix-blend-mode: difference; */
+  background-color: transparent;
+  color: var(--color-foreground);
   z-index: 100;
   transition: color var(--duration-medium) ease;
 }
@@ -54,6 +54,11 @@
   transform: scaleX(0);
   transform-origin: right;
   transition: transform var(--duration-medium) var(--ease-out-1);
+}
+
+.navWrapper a[aria-current="true"] span::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 @media (hover: hover) {

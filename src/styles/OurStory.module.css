@@ -1,9 +1,5 @@
 .ourStory {
-  color: var(--color-green);
-  background-color: var(--color-beige);
   position: relative;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
 }
 
 .ourStory h2::before {
