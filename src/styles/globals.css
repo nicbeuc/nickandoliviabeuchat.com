@@ -219,6 +219,19 @@ h1,h2,h3,h4,h5,h5 {
   }
 }
 
+/* Visually Hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
 /* Lenis Smooth Scroll */
 html.lenis,
 html.lenis body {

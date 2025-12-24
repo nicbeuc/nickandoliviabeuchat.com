@@ -1,0 +1,139 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field[data-column-span="2"] {
+  grid-column: span 2;
+}
+
+.label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: var(--overline-letter-spacing);
+}
+
+.input,
+.select,
+.textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-foreground) 25%, transparent);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  transition: border-color var(--duration-medium) ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-foreground);
+  /* box-shadow: inset 0 0 0 1px currentColor; */
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23F0E8E2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+/* Radio buttons */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.radio {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+.radioText {
+  font-size: var(--font-size-body);
+}
+
+/* Messages */
+.successMessage {
+  text-align: center;
+  padding: 2rem;
+}
+
+.successTitle {
+  font-family: var(--font-ballet), cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.successMessage p:last-child {
+  font-size: var(--font-size-body);
+}
+
+.errorMessage {
+  font-size: var(--font-size-body);
+  color: #ff6b6b;
+  padding: 0.75rem;
+  border: 1px solid #ff6b6b;
+  text-align: center;
+}
+
