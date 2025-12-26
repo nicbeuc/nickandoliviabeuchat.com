@@ -18,9 +18,8 @@ export default function Nav() {
   const activeSections = useRef(new Set());
 
   useEffect(() => {
-    const sections = document.querySelectorAll("[data-color-scheme]");
+    const sections = document.querySelectorAll("section[data-color-scheme]");
 
-    // Observer for nav color (existing)
     const colorObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -40,42 +39,37 @@ export default function Nav() {
       { rootMargin: "-50px 0px -90% 0px", threshold: 0 }
     );
 
-    // Observer for active section
     const activeObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSections.current.add(entry.target);
-            // Only set active if section has an ID
             if (entry.target.id) {
               setActiveSection(entry.target.id);
             } else {
-              // Section without ID is visible, clear active
               setActiveSection(null);
             }
           } else {
             activeSections.current.delete(entry.target);
 
-            // Check remaining intersecting sections
             const remainingWithId = [...activeSections.current].find(s => s.id);
             if (remainingWithId) {
               setActiveSection(remainingWithId.id);
             } else {
-              // No sections with IDs are intersecting
               setActiveSection(null);
             }
           }
         });
       },
       {
-        rootMargin: "-50px 0px -90% 0px",
+        rootMargin: "0px 0px -90% 0px",
         threshold: 0
       }
     );
 
     sections.forEach((section) => {
       colorObserver.observe(section);
-      activeObserver.observe(section); // Observe ALL sections now
+      activeObserver.observe(section);
     });
 
     return () => {

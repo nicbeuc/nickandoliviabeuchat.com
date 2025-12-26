@@ -1,0 +1,24 @@
+.rsvpImage {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+}
+
+.rsvpImage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rsvp h2::before {
+  content: 'Rsvp';
+}
+
+.rsvpIntro {
+  margin-bottom: 2rem;
+}
