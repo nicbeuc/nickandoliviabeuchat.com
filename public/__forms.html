@@ -1,0 +1,21 @@
+<!--
+  This file is a static "blueprint" for Netlify Forms detection.
+  Netlify scans static HTML at build time to detect forms.
+  Since our Next.js form is client-side rendered, we need this file.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Blueprint</title>
+  </head>
+  <body>
+    <form name="rsvp" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="radio" name="attending" value="yes" />
+      <input type="radio" name="attending" value="no" />
+      <textarea name="dietary"></textarea>
+    </form>
+  </body>
+</html>
+

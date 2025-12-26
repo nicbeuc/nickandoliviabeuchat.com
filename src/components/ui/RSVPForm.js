@@ -26,7 +26,7 @@ export default function RSVPForm() {
     const data = new FormData(form);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data).toString(),
@@ -64,10 +64,11 @@ export default function RSVPForm() {
     <form
       name="rsvp"
       method="POST"
-      netlify="true"
+      data-netlify="true"
       onSubmit={handleSubmit}
       className={styles.form}
     >
+      <input type="hidden" name="form-name" value="rsvp" />
       <div className={styles.field} data-column-span="2">
         <label htmlFor="name" className={`${styles.label} visually-hidden`}>
           Guest name(s)
