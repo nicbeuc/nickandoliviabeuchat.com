@@ -65,9 +65,15 @@ export default function RSVPForm() {
       name="rsvp"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className={styles.form}
     >
+      <p hidden>
+        <label>
+          Don&apos;t fill this out if you are human: <input name="bot-field" type="text" />
+        </label>
+      </p>
       <input type="hidden" name="form-name" value="rsvp" />
       <div className={styles.field} data-column-span="2">
         <label htmlFor="name" className={`${styles.label} visually-hidden`}>
@@ -82,6 +88,7 @@ export default function RSVPForm() {
           required
           className={styles.input}
           placeholder="Guest name(s)"
+          autoComplete="off"
         />
       </div>
 
@@ -98,6 +105,7 @@ export default function RSVPForm() {
           required
           className={styles.input}
           placeholder="Your email address"
+          autoComplete="email"
         />
       </div>
 
@@ -114,6 +122,7 @@ export default function RSVPForm() {
               onChange={handleChange}
               required
               className={styles.radio}
+              autoComplete="off"
             />
             <span className={styles.radioText}>Plan on attending</span>
           </label>
@@ -126,6 +135,7 @@ export default function RSVPForm() {
               checked={formData.attending === "no"}
               onChange={handleChange}
               className={styles.radio}
+              autoComplete="off"
             />
             <span className={styles.radioText}>Cannot attend</span>
           </label>

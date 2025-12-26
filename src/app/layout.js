@@ -27,6 +27,10 @@ const gambarinoFont = localFont({
 export const metadata = {
   title: "Nick and Olivia",
   description: "Nick and Olivia",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
