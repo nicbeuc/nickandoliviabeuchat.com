@@ -1,9 +1,9 @@
 import styles from "@/styles/Button.module.css";
 
-export default function Button({ children, onClick, href = '#', ...delegated }) {
-  if (onClick) {
+export default function Button({ children, onClick, href = '#', type, ...delegated }) {
+  if (onClick || type) {
     return (
-      <button onClick={onClick} type="button" className={styles.button} {...delegated}>
+      <button onClick={onClick} type={type || "button"} className={styles.button} {...delegated}>
         {children}
       </button>
     );

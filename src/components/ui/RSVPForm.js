@@ -192,7 +192,7 @@ export default function RSVPForm() {
       )}
 
       <Button
-        onClick={handleSubmit}
+        type="submit"
         disabled={status === "submitting"}
       >
         {status === "submitting" ? "Sending..." : "RSVP"}
