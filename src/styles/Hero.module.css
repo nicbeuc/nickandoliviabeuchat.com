@@ -57,6 +57,7 @@
 
 .heroContent {
   position: relative;
+  background-color: transparent;
   width: 100%;
   height: 100%;
   max-width: 60rem;

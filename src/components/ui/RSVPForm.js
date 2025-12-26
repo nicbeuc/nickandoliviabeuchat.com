@@ -9,8 +9,7 @@ export default function RSVPForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    attending: "",
-    guests: "1",
+    attending: "yes",
     dietary: "",
   });
 
@@ -43,11 +42,20 @@ export default function RSVPForm() {
     }
   };
 
-  if (status === "success") {
+  if (status === "success" && formData.attending === "yes") {
     return (
       <div className={styles.successMessage}>
         <p className={styles.successTitle}>Thank you!</p>
         <p>We can&apos;t wait to celebrate with you.</p>
+      </div>
+    );
+  }
+
+  if (status === "success" && formData.attending === "no") {
+    return (
+      <div className={styles.successMessage}>
+        <p className={styles.successTitle}>Thank you!</p>
+        <p>We&apos;re sorry to hear that you cannot attend. We hope to see you at our next event!</p>
       </div>
     );
   }
@@ -69,9 +77,9 @@ export default function RSVPForm() {
         </label>
       </p>
 
-      <div className={styles.field}>
+      <div className={styles.field} data-column-span="2">
         <label htmlFor="name" className={`${styles.label} visually-hidden`}>
-          Name
+          Guest name(s)
         </label>
         <input
           type="text"
@@ -81,13 +89,13 @@ export default function RSVPForm() {
           onChange={handleChange}
           required
           className={styles.input}
-          placeholder="Your name"
+          placeholder="Guest name(s)"
         />
       </div>
 
-      <div className={styles.field}>
+      <div className={styles.field} data-column-span="2">
         <label htmlFor="email" className={`${styles.label} visually-hidden`}>
-          Email
+          Your email
         </label>
         <input
           type="email"
@@ -97,16 +105,17 @@ export default function RSVPForm() {
           onChange={handleChange}
           required
           className={styles.input}
-          placeholder="your-email@example.com"
+          placeholder="Your email address"
         />
       </div>
 
       <div className={styles.field} data-column-span="2">
-        <label className={styles.label}>Will you be attending?</label>
+        <legend className={`${styles.label} visually-hidden`}>Will you be attending?</legend>
         <div className={styles.radioGroup}>
-          <label className={styles.radioLabel}>
+          <label className={styles.radioLabel} htmlFor="attending-yes">
             <input
               type="radio"
+              id="attending-yes"
               name="attending"
               value="yes"
               checked={formData.attending === "yes"}
@@ -114,26 +123,27 @@ export default function RSVPForm() {
               required
               className={styles.radio}
             />
-            <span className={styles.radioText}>Joyfully accepts</span>
+            <span className={styles.radioText}>Plan on attending</span>
           </label>
-          <label className={styles.radioLabel}>
+          <label className={styles.radioLabel} htmlFor="attending-no">
             <input
               type="radio"
+              id="attending-no"
               name="attending"
               value="no"
               checked={formData.attending === "no"}
               onChange={handleChange}
               className={styles.radio}
             />
-            <span className={styles.radioText}>Regretfully declines</span>
+            <span className={styles.radioText}>Cannot attend</span>
           </label>
         </div>
       </div>
 
       {formData.attending === "yes" && (
         <>
-          <div className={styles.field} data-column-span="2">
-            <label htmlFor="guests" className={styles.label}>
+          {/* <div className={styles.field} data-column-span="2">
+            <label htmlFor="guests" className={`${styles.label} visually-hidden`}>
               Number of guests
             </label>
             <select
@@ -142,17 +152,24 @@ export default function RSVPForm() {
               value={formData.guests}
               onChange={handleChange}
               className={styles.select}
+              required
             >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              <option value="">Select number of guests</option>
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+              <option value="9">9 guests</option>
+              <option value="10">10 guests</option>
             </select>
-          </div>
+          </div> */}
 
           <div className={styles.field} data-column-span="2">
-            <label htmlFor="dietary" className={styles.label}>
+            <label htmlFor="dietary" className={`${styles.label} visually-hidden`}>
               Dietary restrictions
             </label>
             <textarea
@@ -161,8 +178,8 @@ export default function RSVPForm() {
               value={formData.dietary}
               onChange={handleChange}
               className={styles.textarea}
-              placeholder="Please let us know of any allergies or dietary needs"
-              rows={3}
+              placeholder="Any dietary restrictions we should now about? (e.g. gluten-free, vegan, allergies, religious restrictions, etc.)"
+              rows={4}
             />
           </div>
         </>

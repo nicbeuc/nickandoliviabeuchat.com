@@ -18,7 +18,7 @@ export default function Nav() {
   const activeSections = useRef(new Set());
 
   useEffect(() => {
-    const sections = document.querySelectorAll("[data-color-scheme]");
+    const sections = document.querySelectorAll("section[data-color-scheme]");
 
     const colorObserver = new IntersectionObserver(
       (entries) => {

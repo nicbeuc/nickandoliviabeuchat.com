@@ -18,3 +18,7 @@
 .rsvp h2::before {
   content: 'Rsvp';
 }
+
+.rsvpIntro {
+  margin-bottom: 2rem;
+}

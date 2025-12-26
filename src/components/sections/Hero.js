@@ -14,7 +14,7 @@ export default function Hero() {
           className={styles.heroImage}
         />
       </div>
-      <div className={styles.heroContent}>
+      <div className={styles.heroContent} data-color-scheme="2">
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>
             <span>Nick</span><span className={styles.ampersand}>&amp;</span><span>Olivia</span>
