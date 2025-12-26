@@ -64,19 +64,10 @@ export default function RSVPForm() {
     <form
       name="rsvp"
       method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      netlify
       onSubmit={handleSubmit}
       className={styles.form}
     >
-      {/* Hidden fields for Netlify */}
-      <input type="hidden" name="form-name" value="rsvp" />
-      <p hidden>
-        <label>
-          Don&apos;t fill this out: <input name="bot-field" />
-        </label>
-      </p>
-
       <div className={styles.field} data-column-span="2">
         <label htmlFor="name" className={`${styles.label} visually-hidden`}>
           Guest name(s)
