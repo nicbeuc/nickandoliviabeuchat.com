@@ -64,7 +64,7 @@ export default function RSVPForm() {
     <form
       name="rsvp"
       method="POST"
-      netlify
+      netlify="true"
       onSubmit={handleSubmit}
       className={styles.form}
     >
