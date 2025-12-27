@@ -27,6 +27,10 @@ const gambarinoFont = localFont({
 export const metadata = {
   title: "Nick and Olivia Are Getting Married",
   description: "Nick and Olivia are getting married on October 17, 2026 in Knoxville, TN.",
+  metadataBase: new URL('https://nickandoliviabeuchat.com'),
+  alternates: {
+    canonical: '/',
+  },
   robots: {
     index: false,
     follow: false,
