@@ -188,10 +188,10 @@ export default function RSVPForm() {
               rows={4}
             />
           </div>
-
-          <input type="hidden" name="subject" id="subject" value={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`} defaultValue={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`}/>
         </>
       )}
+
+      <input type="hidden" name="subject" id="subject" value={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`} defaultValue={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`}/>
 
       {status === "error" && (
         <p className={styles.errorMessage}>
