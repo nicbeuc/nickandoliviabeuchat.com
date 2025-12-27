@@ -21,11 +21,16 @@ export default function Details() {
               <dt>Date</dt>
               <dd>October 17, 2026</dd>
               <dt>Ceremony</dt>
-              <dd>4:00 PM EST</dd>
+              <dd>
+                <span>4:00 PM EST</span>
+                <span className="text-size-sm">Followed by cocktail hour</span>
+              </dd>
               <dt>Reception</dt>
               <dd>5:30 PM EST</dd>
             </dl>
           </div>
+          <div className="dotted-divider"></div>
+          <p className={styles.detailsNote}>Due to space restrictions, we can only accomodate children of guests who are coming from out of town.</p>
         </div>
       </div>
     </section>

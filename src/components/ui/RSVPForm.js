@@ -54,7 +54,7 @@ export default function RSVPForm() {
   if (status === "success" && formData.attending === "no") {
     return (
       <div className={styles.successMessage}>
-        <p className={styles.successTitle}>Thank you!</p>
+        <p className={styles.successTitle}>We&apos;ll miss you!</p>
         <p>We&apos;re sorry to hear that you cannot attend. We hope to see you at our next event!</p>
       </div>
     );
@@ -90,6 +90,7 @@ export default function RSVPForm() {
           placeholder="Guest name(s)"
           autoComplete="off"
         />
+        <p className={styles.note}>Please enter the names of all guests in your party.</p>
       </div>
 
       <div className={styles.field} data-column-span="2">
@@ -107,6 +108,7 @@ export default function RSVPForm() {
           placeholder="Your email address"
           autoComplete="email"
         />
+        <p className={styles.note}>Just in case we need to get in touch.</p>
       </div>
 
       <div className={styles.field} data-column-span="2">
@@ -197,7 +199,7 @@ export default function RSVPForm() {
         type="submit"
         disabled={status === "submitting"}
       >
-        {status === "submitting" ? "Sending..." : "RSVP"}
+        {status === "submitting" ? "Sending..." : "Send your response"}
       </Button>
     </form>
   );

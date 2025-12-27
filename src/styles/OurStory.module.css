@@ -2,16 +2,16 @@
   position: relative;
 }
 
-.ourStory h2::before {
+/* .ourStory h2::before {
   content: 'Our Story';
-}
+} */
 
 .ourStoryImage {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
 }
 
 .ourStoryImage img {

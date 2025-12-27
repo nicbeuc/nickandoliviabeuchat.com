@@ -3,7 +3,7 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
 }
 
 .rsvpImage img {
@@ -15,9 +15,9 @@
   object-position: center;
 }
 
-.rsvp h2::before {
+/* .rsvp h2::before {
   content: 'Rsvp';
-}
+} */
 
 .rsvpIntro {
   margin-bottom: 2rem;

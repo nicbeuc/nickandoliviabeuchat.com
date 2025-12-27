@@ -29,7 +29,7 @@
 .navWrapper a {
   text-transform: uppercase;
   letter-spacing: var(--overline-letter-spacing);
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-body-sm);
   padding: 1rem;
   display: block;
 

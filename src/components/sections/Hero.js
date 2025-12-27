@@ -9,7 +9,7 @@ export default function Hero() {
       <div className={styles.heroBackground}>
         <Image
           src={heroImage}
-          alt="Nick and Olivia"
+          alt=""
           priority
           className={styles.heroImage}
         />
