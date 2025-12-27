@@ -8,12 +8,13 @@ export default function OurStory() {
       <div className={styles.ourStoryInner} data-layout="split">
         <div className={styles.ourStoryContent}>
           <h2 className="fancy-heading section-heading">Our Story</h2>
-          <p>Ut consequat proident eu est reprehenderit aute commodo voluptate cillum cillum nisi incididunt exercitation adipisicing. Eu do dolor et nulla ex et duis voluptate duis nisi ex est occaecat occaecat. Quis minim magna amet. Dolor exercitation ullamco officia pariatur consectetur non qui dolor ut dolore minim nulla amet nostrud labore.</p>
-          <p>Veniam non id quis irure sunt fugiat deserunt dolor voluptate aliqua culpa est. In magna excepteur voluptate proident cillum incididunt commodo nostrud ad officia minim eu minim ea. Consectetur velit proident pariatur pariatur laborum veniam enim in deserunt. Dolor esse sint commodo enim aliqua mollit. Ad eiusmod mollit adipisicing adipisicing culpa aliqua sit minim ut qui.</p>
-          <p>Deserunt ad aliqua Lorem duis anim. Officia proident consequat id et magna et ex dolor ex sint labore minim exercitation adipisicing. Minim nisi laboris excepteur ex eiusmod.</p>
+          <p>With the help of their mutual friend Bridget playing cupid, Nick and Olivia met in 2019 while attending the University of Tennessee.</p>
+          <p>Among many other things, they bonded over their shared love of animals, slice-of-life Japanese reality shows, and favorite local coffee shops. This bond quickly grew into a deep friendship, and eventually an unbreakable love, making the couple inseparable from that point on.</p>
+          <p>Though the relationship was tested early on by complications caused by the global pandemic, ultimately it only brought them closer together. Six years on, they now live happily together with their four-legged children, Griffin, Lacey, Hank and Chicken.</p>
+          <p>After their enagement in 2025, Nick and Olivia are excited to invite you to share in their joy as they embark on the next chapter of their lives together.</p>
         </div>
         <div className={styles.ourStoryImage}>
-          <Image src={ourStoryImage} alt="Our Story" width={800} height={1200}/>
+          <Image src={ourStoryImage} alt="Nick and Olivia" width={800} height={1200}/>
         </div>
       </div>
     </section>
