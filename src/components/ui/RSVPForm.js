@@ -111,7 +111,7 @@ export default function RSVPForm() {
         <p className={styles.note}>Just in case we need to get in touch.</p>
       </div>
 
-      <textarea id="attending-display" name="attending-display" value={formData.attending === "yes" ? "plan on attending the wedding" : "cannot attend the wedding"} hidden defaultValue={formData.attending === "yes" ? "plan on attending the wedding" : "cannot attend the wedding"}/>
+      <textarea id="attending-display" name="attending-display" value={formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."} hidden defaultValue={formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}/>
 
       <div className={styles.field} data-column-span="2">
         <legend className={`${styles.label} visually-hidden`}>Will you be attending?</legend>
