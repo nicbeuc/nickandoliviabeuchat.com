@@ -30,7 +30,7 @@ export default function Details() {
             </dl>
           </div>
           <div className="dotted-divider"></div>
-          <p className={styles.detailsNote}>Due to space restrictions, we can only accomodate children of guests who are coming from out of town.</p>
+          <p className={styles.detailsNote}>Due to space restrictions, we can only accommodate children of guests who are coming from out of town.</p>
         </div>
       </div>
     </section>
