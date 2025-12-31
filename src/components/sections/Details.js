@@ -10,7 +10,7 @@ export default function Details() {
           <Image src={venueImage} alt="Riverview Family Farm" width={800} height={1200}/>
         </div>
         <div className={styles.detailsContent}>
-          <h2 className="fancy-heading section-heading">Day-of Details</h2>
+          <h2 className="fancy-heading section-heading">Details</h2>
           <div className={styles.detailsInfo}>
             <dl>
               <dt>Venue</dt>
