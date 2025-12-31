@@ -52,6 +52,10 @@ body {
   font-weight: 400;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 main {
   display: block;
   position: relative;
@@ -184,6 +188,13 @@ h1,h2,h3,h4,h5,h5 {
 
 .non-sticky-sections {
   position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+.non-sticky-sections-inner {
+  position: relative;
+  isolation: isolate;
   z-index: 1;
 }
 
