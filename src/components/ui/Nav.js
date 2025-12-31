@@ -14,6 +14,7 @@ const NAV_ITEMS = [
 export default function Nav() {
   const [navColor, setNavColor] = useState(FALLBACK_COLOR);
   const [activeSection, setActiveSection] = useState(null);
+  const [isHidden, setIsHidden] = useState(false);
   const intersectingSections = useRef(new Set());
   const activeSections = useRef(new Set());
 
@@ -72,15 +73,40 @@ export default function Nav() {
       activeObserver.observe(section);
     });
 
+    // Hide nav when footer fills 75% of viewport
+    // Since footer is sticky at bottom with z-index: -1, we track the content above it instead
+    const contentAboveFooter = document.querySelector(".non-sticky-sections-inner");
+
+    const checkFooterCoverage = () => {
+      if (!contentAboveFooter) return;
+
+      const rect = contentAboveFooter.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // When the bottom of the content is at or above 25% from the top of viewport,
+      // the footer (behind it) is filling at least 75% of the viewport
+      const threshold = viewportHeight * 0.25;
+      setIsHidden(rect.bottom <= threshold);
+    };
+
+    // Check on scroll
+    window.addEventListener("scroll", checkFooterCoverage, { passive: true });
+    // Check on resize
+    window.addEventListener("resize", checkFooterCoverage, { passive: true });
+    // Initial check
+    checkFooterCoverage();
+
     return () => {
       colorObserver.disconnect();
       activeObserver.disconnect();
+      window.removeEventListener("scroll", checkFooterCoverage);
+      window.removeEventListener("resize", checkFooterCoverage);
     };
   }, []);
 
   return (
     <header
-      className={styles.nav}
+      className={`${styles.nav} ${isHidden ? styles.hidden : ""}`}
       style={{ "--color-foreground": navColor }}
     >
       <nav className={styles.navWrapper}>
