@@ -111,7 +111,7 @@ export default function RSVPForm() {
         <p className={styles.note}>Just in case we need to get in touch.</p>
       </div>
 
-      <textarea id="attending-display" name="attending-display" value={formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."} hidden defaultValue={formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}/>
+      <textarea id="attending-display" name="attending-display" value={formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."} hidden readOnly />
 
       <div className={styles.field} data-column-span="2">
         <legend className={`${styles.label} visually-hidden`}>Will you be attending?</legend>
@@ -191,7 +191,7 @@ export default function RSVPForm() {
         </>
       )}
 
-      <input type="hidden" name="subject" id="subject" value={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`} defaultValue={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`}/>
+      <input type="hidden" name="subject" id="subject" value={`${formData.name} ${formData.attending === "yes" ? "will be attending the wedding!" : "cannot attend the wedding."}`} readOnly />
 
       {status === "error" && (
         <p className={styles.errorMessage}>
