@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { href: "#our-story", label: "Our Story" },
   { href: "#details", label: "Details" },
   { href: "#rsvp", label: "RSVP" },
+  { href: "#registry", label: "Registry" },
 ];
 
 export default function Nav() {
@@ -73,8 +74,6 @@ export default function Nav() {
       activeObserver.observe(section);
     });
 
-    // Hide nav when footer fills 75% of viewport
-    // Since footer is sticky at bottom with z-index: -1, we track the content above it instead
     const contentAboveFooter = document.querySelector(".non-sticky-sections-inner");
 
     const checkFooterCoverage = () => {
@@ -83,17 +82,12 @@ export default function Nav() {
       const rect = contentAboveFooter.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
 
-      // When the bottom of the content is at or above 25% from the top of viewport,
-      // the footer (behind it) is filling at least 75% of the viewport
       const threshold = viewportHeight * 0.25;
       setIsHidden(rect.bottom <= threshold);
     };
 
-    // Check on scroll
     window.addEventListener("scroll", checkFooterCoverage, { passive: true });
-    // Check on resize
     window.addEventListener("resize", checkFooterCoverage, { passive: true });
-    // Initial check
     checkFooterCoverage();
 
     return () => {
