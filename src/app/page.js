@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import OurStory from "@/components/sections/OurStory";
 import Details from "@/components/sections/Details";
 import RSVP from "@/components/sections/RSVP";
+import Registry from "@/components/sections/Registry";
 import Footer from "@/components/sections/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           <OurStory />
           <Details />
           <RSVP />
+          <Registry />
         </div>
         <Footer />
       </div>
