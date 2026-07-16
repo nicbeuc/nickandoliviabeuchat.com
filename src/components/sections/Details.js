@@ -23,8 +23,10 @@ export default function Details() {
               <dt>Ceremony</dt>
               <dd>
                 <span>4:00 PM EST</span>
-                <span className="text-size-sm">Followed by cocktail hour</span>
+                <span className="text-size-sm">Please plan to arrive by <strong>3:30 PM EST</strong>.</span>
               </dd>
+              <dt>Cocktail Hour</dt>
+              <dd>4:30 PM EST</dd>
               <dt>Reception</dt>
               <dd>5:30 PM EST</dd>
             </dl>

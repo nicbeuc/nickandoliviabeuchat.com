@@ -43,6 +43,10 @@
   background: transparent;
   color: inherit;
   transition: border-color var(--duration-medium) ease;
+
+  @media (width <= 768px) {
+    font-size: 16px;
+  }
 }
 
 .input::placeholder,

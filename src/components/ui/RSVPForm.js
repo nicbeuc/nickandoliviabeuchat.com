@@ -90,7 +90,7 @@ export default function RSVPForm() {
           placeholder="Guest name(s)"
           autoComplete="off"
         />
-        <p className={styles.note}>Please enter the names of all guests in your party.</p>
+        <p className={styles.note}>Please enter the first and last names of all guests in your party, separated by a comma.</p>
       </div>
 
       <div className={styles.field} data-column-span="2">
