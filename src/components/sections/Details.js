@@ -38,7 +38,7 @@ export default function Details() {
           </div>
           <div className={styles.detailsNote}>
             <h2 className={styles.detailsHeading}>Dress code</h2>
-            <p>Semi-form or cocktail attire — tie optional. Think of fall colors for your outfitand consider the outdoor setting when selecting your shoes.</p>
+            <p>Semi-formal or cocktail attire — tie optional. Think of fall colors for your outfit and consider the outdoor ceremony on the lawn for shoe selection.</p>
           </div>
         </div>
       </div>
