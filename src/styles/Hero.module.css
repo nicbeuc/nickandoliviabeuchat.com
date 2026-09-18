@@ -101,7 +101,7 @@
 }
 
 .heroContent p {
-  width: 14ch;
+  width: 14.5ch;
   font-size: var(--font-size-body);
   letter-spacing: var(--overline-letter-spacing);
   text-transform: uppercase;

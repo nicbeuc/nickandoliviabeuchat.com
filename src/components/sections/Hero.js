@@ -10,7 +10,10 @@ export default function Hero() {
         <Image
           src={heroImage}
           alt=""
-          priority
+          preload
+          sizes="100vw"
+          fill
+          placeholder="blur"
           className={styles.heroImage}
         />
       </div>

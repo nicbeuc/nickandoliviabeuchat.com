@@ -7,7 +7,7 @@ export default function Registry() {
     <section id="registry" data-color-scheme="1" data-container="contained">
       <div className={styles.registryInner} data-layout="split">
         <div className={styles.registryImage}>
-          <Image src={registryImage} alt="Registry" width={800} height={1200}/>
+          <Image src={registryImage} alt="Registry" width={800} height={1200} placeholder="blur"/>
         </div>
         <div className={styles.registryContent}>
           <h2 className="fancy-heading section-heading">Registry</h2>

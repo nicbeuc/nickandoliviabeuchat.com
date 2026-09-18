@@ -14,7 +14,7 @@ export default function RSVP() {
           <RSVPForm />
         </div>
         <div className={styles.rsvpImage}>
-          <Image src={rsvpImage} alt="Nick and Olivia" width={800} height={1200}/>
+          <Image src={rsvpImage} alt="Nick and Olivia" width={800} height={1200} placeholder="blur"/>
         </div>
       </div>
     </section>

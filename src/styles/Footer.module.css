@@ -61,6 +61,7 @@
   font-size: 8rem;
   line-height: 1;
   font-family: var(--font-ballet), cursive;
+  letter-spacing: 0;
   text-align: center;
 
   @media (width <= 768px) {

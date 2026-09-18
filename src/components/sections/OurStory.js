@@ -14,7 +14,7 @@ export default function OurStory() {
           <p>After their engagement in 2025, Nick and Olivia are excited to invite you to share in their joy as they embark on the next chapter of their lives together.</p>
         </div>
         <div className={styles.ourStoryImage}>
-          <Image src={ourStoryImage} alt="Nick and Olivia" width={800} height={1200}/>
+          <Image src={ourStoryImage} alt="Nick and Olivia" width={800} height={1200} placeholder="blur"/>
         </div>
       </div>
     </section>
