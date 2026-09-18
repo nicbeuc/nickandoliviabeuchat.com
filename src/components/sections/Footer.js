@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer} data-container="full-width">
       <div className={styles.footerBg}>
-        <Image src={footerImage} alt="" width={1920} height={1080} className={styles.footerImage} />
+        <Image src={footerImage} alt="" fill placeholder="blur" sizes="100vw" className={styles.footerImage} />
       </div>
       <div className={styles.footerContent}>
         <div className={styles.footerText}>

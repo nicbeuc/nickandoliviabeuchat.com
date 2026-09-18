@@ -7,7 +7,7 @@ export default function Details() {
     <section className={styles.details} id="details" data-color-scheme="3" data-container="contained">
       <div className={styles.detailsInner} data-layout="split">
         <div className={styles.detailsImage}>
-          <Image src={venueImage} alt="Riverview Family Farm" width={800} height={1200}/>
+          <Image src={venueImage} alt="Riverview Family Farm" width={800} height={1200} placeholder="blur"/>
         </div>
         <div className={styles.detailsContent}>
           <h2 className="fancy-heading section-heading">Details</h2>
@@ -23,7 +23,7 @@ export default function Details() {
               <dt>Ceremony</dt>
               <dd>
                 <span>4:00 PM EST</span>
-                <span className="text-size-sm">Please plan to arrive by <strong>3:30 PM EST</strong>.</span>
+                <span className="text-size-sm">Please plan to arrive no later than <strong>3:30 PM EST</strong>.</span>
               </dd>
               <dt>Cocktail Hour</dt>
               <dd>4:30 PM EST</dd>
@@ -32,7 +32,14 @@ export default function Details() {
             </dl>
           </div>
           <div className="dotted-divider"></div>
-          <p className={styles.detailsNote}>Due to space restrictions, we can only accommodate children of guests who are coming from out of town.</p>
+          <div className={styles.detailsNote}>
+            <h2 className={styles.detailsHeading}>A note on children</h2>
+            <p>Due to space restrictions, we can only accommodate children of guests who are coming from out of town. Please plan accordingly.</p>
+          </div>
+          <div className={styles.detailsNote}>
+            <h2 className={styles.detailsHeading}>Dress code</h2>
+            <p>Semi-form or cocktail attire — tie optional. Think of fall colors for your outfitand consider the outdoor setting when selecting your shoes.</p>
+          </div>
         </div>
       </div>
     </section>

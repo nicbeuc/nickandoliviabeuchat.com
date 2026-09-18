@@ -10,11 +10,11 @@
   --font-size-body: 1rem;
   --font-size-body-sm: 0.875rem;
   --font-size-body-xs: 0.75rem;
-  --overline-letter-spacing: 0.05ch;
+  --overline-letter-spacing: 0.075ch;
   --page-margin: 1.5rem;
 
   /* Layout */
-  --page-width-contained: 64rem;
+  --page-width-contained: 72rem;
   --section-padding-vertical: clamp(4rem, 12vh, 8rem);
 
   /* Transitions */
@@ -74,7 +74,7 @@ a {
 
 p {
   line-height: 1.35;
-  text-wrap: balance;
+  text-wrap: pretty;
   font-size: var(--font-size-body);
 }
 
@@ -111,7 +111,7 @@ h1,h2,h3,h4,h5,h5 {
   font-size: var(--font-size-body);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: var(--overline-letter-spacing);
+  /* letter-spacing: var(--overline-letter-spacing); */
 }
 
 .font-ballet {

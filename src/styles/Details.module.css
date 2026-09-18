@@ -34,7 +34,8 @@
   grid-template-columns: 16ch 1fr;
 }
 
-.detailsInfo dt {
+.detailsInfo dt,
+.detailsHeading {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: var(--overline-letter-spacing);
@@ -56,4 +57,12 @@
 
 .detailsNote {
   margin-top: 2rem;
+}
+
+.detailsNote p {
+  font-size: 0.875rem;
+}
+
+.detailsHeading {
+  margin-bottom: 0.5rem;
 }
